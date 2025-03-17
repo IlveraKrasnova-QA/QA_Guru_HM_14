@@ -1,3 +1,5 @@
+package tests;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +8,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class NewFlatsTests extends TestBase {
+public class NewFlatsJUnitTests extends TestBase {
 
     @Test
     @DisplayName("Переход на страницу новостроек через  шапку сайта")
@@ -33,7 +35,7 @@ public class NewFlatsTests extends TestBase {
         open("");
         $("[class=index-module-sticky-_WN0D]").$(byText("Каталоги")).hover();
         $("[data-catalog-slug=catalog_novostroyki]").click();
-        $("[class=main-linkWrapper-qV2kQ]").click();
+        $("[class=index-rightWrapper-_z7uN]").click();
         $("[class=styles-module-root-SzJd4]").shouldHave(text("Город или регион"));
         $("[class=styles-module-crossIcon__size_m-_ltMx]").click();
         $("[class=styles-module-dropdownScrollWrapper-ugdzU]").shouldBe(visible);
