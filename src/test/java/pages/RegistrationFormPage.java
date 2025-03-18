@@ -1,8 +1,8 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.components.RegistrationFormComponents;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -10,13 +10,16 @@ import static com.codeborne.selenide.Selenide.*;
 public class RegistrationFormPage {
 
     private SelenideElement
+            navBarInput = $("[class=index-module-sticky-_WN0D]"),
             registrationButtonInput = $("[data-marker=registration-link]"),
             personalAccountInput = $("[class=ChoosingAccountTypeComponent-type-SgQVO]"),
             continueButtonInput = $("[class=css-1kdcmzd]"),
             entryButtonInput = $("[class=css-19geruh]"),
-            entryFormInput = $("[class=css-12fgjfr]");
-
-    RegistrationFormComponents registrationFormComponents = new RegistrationFormComponents();
+            entryFormInput = $("[class=css-12fgjfr]"),
+            bottomOfFormInput = $("[class=AuthorizationMainScreen-footer-QJLQy]"),
+            enterPhoneInput = $("[class=EnterPhoneForm-content-WgOcb]"),
+            phoneForm = $("[class=EnterPhoneForm-container-xxkr8]"),
+            pageTitle = $("[id=b2b-hub-app]");
 
     public RegistrationFormPage openMainPage() {
         open("");
@@ -25,7 +28,7 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage openRegisrationForm (String value) {
-        registrationFormComponents.openRegisrationForm(value);
+        navBarInput.$(byText(value)).click();
 
         return this;
     }
@@ -49,13 +52,13 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage checkWarning (String value) {
-        registrationFormComponents.checkWarning(value);
+        enterPhoneInput.shouldHave(text(value));
 
         return this;
     }
 
     public RegistrationFormPage checkText (String value) {
-        registrationFormComponents.checkText(value);
+        phoneForm.shouldHave(text(value));
 
         return this;
     }
@@ -74,27 +77,15 @@ public class RegistrationFormPage {
     }
 
     public RegistrationFormPage redirectToSection (String value) {
-        registrationFormComponents.redirectToSection(value);
+        bottomOfFormInput.$(byText(value)).click();
 
         return this;
     }
 
-    public RegistrationFormPage checkTermsTitle (String value) {
-        registrationFormComponents.checkTermsTitle(value);
+    public RegistrationFormPage checkPageTitle (String value) {
+        pageTitle.shouldHave(text(value));
 
         return this;
     }
-
-    public RegistrationFormPage checkPrivacyTitle (String value) {
-        registrationFormComponents.checkPrivacyTitle(value);
-
-        return this;
-    }
-
-
-
-
-
-
 
 }

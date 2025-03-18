@@ -39,7 +39,7 @@ public class RegistrationFormJUnitTests extends TestBase {
         registrationFormPage.openMainPage()
                             .openRegisrationForm("Вход и регистрация")
                             .redirectToSection("условиями использования Авито")
-                            .checkTermsTitle("Условия использования Авито");
+                            .checkPageTitle("Условия использования Авито");
 
     }
 
@@ -49,7 +49,7 @@ public class RegistrationFormJUnitTests extends TestBase {
         registrationFormPage.openMainPage()
                             .openRegisrationForm("Вход и регистрация")
                             .redirectToSection("политикой конфиденциальности")
-                            .checkPrivacyTitle("Политика конфиденциальности");
+                            .checkPageTitle("Политика конфиденциальности");
 
     }
 
