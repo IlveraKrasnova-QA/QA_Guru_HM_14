@@ -14,7 +14,7 @@ import java.util.Map;
 public class TestBase {
         @BeforeAll
         static void beforeAll(){
-                Configuration.baseUrl = "https://www.avito.ru";
+                Configuration.baseUrl = "https://www.avito.ru/";
                 Configuration.pageLoadStrategy = "eager";
                 SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
