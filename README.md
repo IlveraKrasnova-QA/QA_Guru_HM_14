@@ -1,7 +1,7 @@
-<img src="src/test/resources/Avito_logo1.png" width="148" height="40">
+<img src="src/test/resources/Avito_logo.png" width="148" height="40">
 
 # Проект по автоматизации тестирования для компании [Avito](https://www.avito.ru)
-________
+___
 ## Содержание
 * <a href="#annotation">Описание</a>
 * <a href="#tools">Технологии и инструменты</a>
@@ -12,5 +12,15 @@ ________
 Проект состоит из UI-тестов, цель которых повысить качество продукта и сократить время на тестирование.  
 <a id="tools"></a>
 ## Технологии и инструменты
-[![Java](/icons/Java.png)](https://www.java.com)[![Gradle](/icons/Gradle.png)](https://gradle.org)[![Intelij_IDEA](/icons/Intelij_IDEA.png)](https://www.jetbrains.com/idea)[![Selenide](/icons/Selenide.png)](https://selenide.org)[![Selenoid](/icons/Selenoid.png)](https://aerokube.com/selenoid)[![JUnit5](/icons/JUnit5.png)](https://junit.org/junit5)[![Jenkins](/icons/Jenkins.png)](https://www.jenkins.io)[![Allure_Report](/icons/Allure_Report.png)](https://docs.qameta.io/allure)[![Telegram](/icons/Telegram.png)](https://telegram.org)
-
+<div align="center">
+<a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="src/test/resources/intellij_idea.png" width="50"/></a>
+<a href="https://github.com/"><img alt="GitHub" height="50" src="src/test/resources/github.svg.png" width="50"/></a>  
+<a href="https://www.java.com/"><img alt="Java" height="50" src="src/test/resources/Java.jpg" width="80"/></a>
+<a href="https://gradle.org/"><img alt="Gradle" height="50" src="src/test/resources/gradle.svg" width="50"/></a>  
+<a href="https://junit.org/junit5/"><img alt="JUnit 5" height="50" src="src/test/resources/junit5.png" width="50"/></a>
+<a href="https://selenide.org/"><img alt="Selenide" height="50" src="src/test/resources/selenide.png" width="50"/></a>
+<a href="https://aerokube.com/selenoid/"><img alt="Selenoid" height="50" src="src/test/resources/Selenoid.png" width="50"/></a>
+<a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="src/test/resources/Jenkins.svg.png" width="35"/></a>
+<a href="https://github.com/allure-framework/"><img alt="Allure Report" height="50" src="src/test/resources/AllureReports.png" width="50"/></a>
+<a href="https://telegram.org/"><img alt="Telegram" height="47" src="src/test/resources/Telegram.svg.png" width="47"/></a>
+</div>
