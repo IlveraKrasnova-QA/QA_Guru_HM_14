@@ -26,9 +26,9 @@ public class TestBase {
                 Configuration.browserCapabilities = capabilities;
 
                 String browser = System.getProperty("browser");
-                Configuration.browser = browser != null ? browser : "chrome";
+                Configuration.browser = browser != null ? browser : "mozilla";
                 String browserversion = System.getProperty("version");
-                Configuration.browserVersion = browserversion != null ? browserversion : "127.0";
+                Configuration.browserVersion = browserversion != null ? browserversion : "124.0";
                 String browsersize = System.getProperty("size");
                 Configuration.browserSize = browsersize != null ? browsersize : "1928x1080";
 
