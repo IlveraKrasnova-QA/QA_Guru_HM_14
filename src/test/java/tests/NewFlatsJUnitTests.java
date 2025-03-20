@@ -1,11 +1,13 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.NewFlatsPage;
 
 import static io.qameta.allure.Allure.step;
 
+@Tag("newFlats_tests")
 public class NewFlatsJUnitTests extends TestBase {
 
     NewFlatsPage newFlatsPage = new NewFlatsPage();

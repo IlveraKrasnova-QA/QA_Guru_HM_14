@@ -41,3 +41,9 @@ tasks.withType(Test) {
     }
 }
 
+task goose_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("registration_tests", "newFlats_tests")
+    }
+}
+
