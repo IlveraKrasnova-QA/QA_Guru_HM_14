@@ -7,7 +7,7 @@ import pages.NewFlatsPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("newFlats_tests")
+@Tag("newFlats-tests")
 public class NewFlatsJUnitTests extends TestBase {
 
     NewFlatsPage newFlatsPage = new NewFlatsPage();

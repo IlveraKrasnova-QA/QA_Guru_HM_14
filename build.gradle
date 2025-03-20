@@ -47,13 +47,13 @@ tasks.withType(Test) {
 
 task registration_tests(type: Test) {
     useJUnitPlatform {
-        includeTags("registration_tests")
+        includeTags("registration-tests")
     }
 }
 
 task newFlats_tests(type: Test) {
     useJUnitPlatform {
-        includeTags("newFlats_tests")
+        includeTags("newFlats-tests")
     }
 }
 
