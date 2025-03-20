@@ -1,7 +1,7 @@
 <img src="src/test/resources/Avito_logo.png" width="148" height="40">
 
 # Проект по автоматизации тестирования для компании [Avito](https://www.avito.ru)
-___
+
 ## Содержание
 * <a href="#annotation">Описание</a>
 * <a href="#tools">Технологии и инструменты</a>
