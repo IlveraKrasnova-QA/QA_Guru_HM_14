@@ -19,7 +19,7 @@ public class NewFlatsJUnitTests extends TestBase {
         newFlatsPage.openMainPage()
                     .navBarSection("Каталоги");
         });
-        step("Переходим на страницу с новостройками", () -> {
+        step("Переходим на страницу с новостройками и проверяем заголовок", () -> {
         newFlatsPage.redirectToSectionFromNavBar()
                     .checkTitle("Новостройки");
         });
