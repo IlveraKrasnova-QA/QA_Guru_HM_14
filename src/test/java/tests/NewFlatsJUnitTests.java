@@ -41,7 +41,7 @@ public class NewFlatsJUnitTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка отображения новостроек для опреденного города")
+    @DisplayName("Проверка отображения новостроек для определенного города")
     void successRegionChangingTest() {
         step("Открываем попап с выбором города и региона", () -> {
         newFlatsPage.openMainPage()
