@@ -17,6 +17,7 @@ public class TestBase {
         void beforeEach() {
                 SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         }
+
         @BeforeAll
         static void beforeAll(){
                 Configuration.baseUrl = "https://www.avito.ru/";
