@@ -1,4 +1,4 @@
-<img src="src/test/resources/Avito_logo.png" width="148" height="40">
+<img src="media/Avito_logo.png" width="148" height="40">
 
 # Проект по автоматизации тестирования для компании [Avito](https://www.avito.ru)
 
@@ -20,16 +20,16 @@
 <a id="tools"></a>
 ## Технологии и инструменты
 <div align="center">
-<a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="src/test/resources/intellij_idea.png" width="50"/></a>
-<a href="https://github.com/"><img alt="GitHub" height="50" src="src/test/resources/github.svg.png" width="50"/></a>  
-<a href="https://www.java.com/"><img alt="Java" height="50" src="src/test/resources/Java.jpg" width="80"/></a>
-<a href="https://gradle.org/"><img alt="Gradle" height="50" src="src/test/resources/gradle.svg" width="50"/></a>  
-<a href="https://junit.org/junit5/"><img alt="JUnit 5" height="50" src="src/test/resources/junit5.png" width="50"/></a>
-<a href="https://selenide.org/"><img alt="Selenide" height="50" src="src/test/resources/selenide.png" width="50"/></a>
-<a href="https://aerokube.com/selenoid/"><img alt="Selenoid" height="50" src="src/test/resources/Selenoid.png" width="50"/></a>
-<a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="src/test/resources/Jenkins.svg.png" width="35"/></a>
-<a href="https://github.com/allure-framework/"><img alt="Allure Report" height="50" src="src/test/resources/AllureReports.png" width="50"/></a>
-<a href="https://telegram.org/"><img alt="Telegram" height="47" src="src/test/resources/Telegram.svg.png" width="47"/></a>
+<a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="media/intellij_idea.png" width="50"/></a>
+<a href="https://github.com/"><img alt="GitHub" height="50" src="media/github.svg.png" width="50"/></a>  
+<a href="https://www.java.com/"><img alt="Java" height="50" src="media/Java.jpg" width="80"/></a>
+<a href="https://gradle.org/"><img alt="Gradle" height="50" src="media/gradle.svg" width="50"/></a>  
+<a href="https://junit.org/junit5/"><img alt="JUnit 5" height="50" src="media/junit5.png" width="50"/></a>
+<a href="https://selenide.org/"><img alt="Selenide" height="50" src="media/selenide.png" width="50"/></a>
+<a href="https://aerokube.com/selenoid/"><img alt="Selenoid" height="50" src="media/Selenoid.png" width="50"/></a>
+<a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="media/Jenkins.svg.png" width="35"/></a>
+<a href="https://github.com/allure-framework/"><img alt="Allure Report" height="50" src="media/AllureReports.png" width="50"/></a>
+<a href="https://telegram.org/"><img alt="Telegram" height="47" src="media/Telegram.svg.png" width="47"/></a>
 </div>
 
 <a id="cases"></a>
@@ -78,12 +78,12 @@ ${TASK}
 ## Запуск тестов в <a target="_blank" href="https://jenkins.autotests.cloud/job/avito_tests_14/"> Jenkins </a>
 * Перед запуском тестов необходимо выбрать параметры
 <p align="center">
-<img src="src/test/resources/Jenkins.png"/>
+<img src="media/Jenkins.png"/>
 </p>
 
 * После прохождения тестов на главной проекта отображаются результаты в виде графика, ссылок на логи и отчеты:
 <p align="center">
-<img src="src/test/resources/Jenkins_main.png"/>
+<img src="media/Jenkins_main.png"/>
 </p>
 
 <a id="allure"></a>
@@ -92,39 +92,39 @@ ${TASK}
 * Отчет для тестов с тегом `newFlats_tests` - <a target="_blank" href="https://jenkins.autotests.cloud/job/avito_tests_14/26/allure/"> Allure report </a>
 ### Основное окно
 <p align="center">
-<img src="src/test/resources/allure1.png">
+<img src="media/allure1.png">
 </p>
 <p align="center">
-<img src="src/test/resources/allure2.png">
+<img src="media/allure2.png">
 </p>
 
 ### Тесты
 <p align="center">
-<img src="src/test/resources/allure3.png">
+<img src="media/allure3.png">
 </p>
 <p align="center">
-<img src="src/test/resources/allure4.png">
+<img src="media/allure4.png">
 </p>
 
 ### Графики
 <p align="center">
-<img src="src/test/resources/allure5.png">
+<img src="media/allure5.png">
 </p>
 <p align="center">
-<img src="src/test/resources/allure6.png">
+<img src="media/allure6.png">
 </p>
 
 <a id="video"></a>
 ## Пример прогона теста в Selenoid
 * Для каждого теста в Allure создается видео с прогоном:
 <p align="center">
-<img src="src/test/resources/example.gif">
+<img src="media/example.gif">
 </p>
 
 <a id="telegram"></a>
 ## Уведомления в Telegram с использованием бота
 * После каждого прогона тестов  бот отправляет уведомление в Telegram со ссылкой на Allure отчет:
 <p align="center">
-<img src="src/test/resources/telegramReport.png">
+<img src="media/telegramReport.png">
 </p>
 
