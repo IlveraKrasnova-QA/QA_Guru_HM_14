@@ -3,6 +3,8 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.MainPage;
+import pages.MapPage;
 import pages.NewFlatsPage;
 
 import static io.qameta.allure.Allure.step;
@@ -11,17 +13,21 @@ import static io.qameta.allure.Allure.step;
 public class NewFlatsJUnitTests extends TestBase {
 
     NewFlatsPage newFlatsPage = new NewFlatsPage();
+    MainPage newMainPage = new MainPage();
+    MapPage newMapPage = new MapPage();
 
     @Test
     @DisplayName("Переход на страницу новостроек через  шапку сайта")
     void successfulRedirectToNewBuildingsFromHeaderTest() {
         step("Кликаем на каталог новостроек в навбаре", () -> {
-        newFlatsPage.openMainPage()
+        newMainPage.openMainPage()
                     .navBarSection("Каталоги");
         });
-        step("Переходим на страницу с новостройками и проверяем заголовок", () -> {
-        newFlatsPage.redirectToSectionFromNavBar()
-                    .checkTitle("Новостройки");
+        step("Переходим на страницу с новостройками", () -> {
+        newMainPage.redirectToSectionFromNavBar();
+        });
+        step("Проверяем заголовок", () -> {
+        newFlatsPage.checkTitle("Новостройки");
         });
 
     }
@@ -30,8 +36,8 @@ public class NewFlatsJUnitTests extends TestBase {
     @DisplayName("Переход на страницу новостроек через поиск")
     void successfulRedirectToNewBuildingsFromCategoriesTest() {
         step("Вводим в поиске название категории и переходим по результату", () -> {
-        newFlatsPage.openMainPage()
-                    .redirectToSectionFromSearch("новостройки");
+        newMainPage.openMainPage()
+                   .redirectToSectionFromSearch("новостройки");
         });
         step("Проверяем отображение корректного заголовка и 'хлебных крошек'", () -> {
         newFlatsPage.checkPageTitle("новостройки")
@@ -43,18 +49,22 @@ public class NewFlatsJUnitTests extends TestBase {
     @Test
     @DisplayName("Проверка отображения новостроек для определенного города")
     void successRegionChangingTest() {
-        step("Открываем попап с выбором города и региона", () -> {
-        newFlatsPage.openMainPage()
+        step("Переходим в раздел новостроек", () -> {
+         newMainPage.openMainPage()
                     .navBarSection("Каталоги")
-                    .redirectToSectionFromNavBar()
-                    .openMap()
-                    .checkMapTitle("Город или регион");
+                    .redirectToSectionFromNavBar();
+        });
+        step("Открываем попап с выбором города и региона", () -> {
+        newFlatsPage.openMap();
+        });
+        step("Проверяем открытие нужного попапа", () -> {
+        newMapPage.checkMapTitle("Город или регион");
         });
         step("Выбираем город", () -> {
-        newFlatsPage.clickOnMapSearch()
-                    .setCity("Казань")
-                    .clickOnCity("Казань")
-                    .showResults();
+        newMapPage.clickOnMapSearch()
+                   .setCity("Казань")
+                   .clickOnCity("Казань")
+                   .showResults();
         });
         step("Проверяем отображение корректных результатов", () -> {
             newFlatsPage.checkCityResults("Квартиры в новых ЖК в Казани");
@@ -66,7 +76,7 @@ public class NewFlatsJUnitTests extends TestBase {
     @DisplayName("Проверка отображения подсказки по выбору адреса")
     void chekingCalculatorTest() {
         step("Переходим в раздел новостроек", () -> {
-        newFlatsPage.openMainPage()
+        newMainPage.openMainPage()
                     .navBarSection("Каталоги")
                     .redirectToSectionFromNavBar();
         });
