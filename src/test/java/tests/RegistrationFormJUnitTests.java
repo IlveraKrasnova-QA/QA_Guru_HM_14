@@ -7,7 +7,6 @@ import pages.MainPage;
 import pages.RegistrationFormPage;
 import pages.RulesPage;
 
-import static io.qameta.allure.Allure.step;
 
 @Tag("registration-tests")
 public class RegistrationFormJUnitTests extends TestBase {
