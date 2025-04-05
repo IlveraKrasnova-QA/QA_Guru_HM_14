@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MapPage {
+
     private SelenideElement
             mapSearchInput = $("[class=styles-module-crossIcon__size_m-_ltMx]"),
             cityInput = $("[class=styles-module-searchInput-DS602]"),

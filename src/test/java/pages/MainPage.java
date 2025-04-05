@@ -37,4 +37,10 @@ public class MainPage {
         return this;
     }
 
+    public MainPage openRegisrationForm (String value) {
+        navBarInput.$(byText(value)).click();
+
+        return this;
+    }
+
 }
