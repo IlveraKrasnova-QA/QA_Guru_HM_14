@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -20,42 +21,49 @@ public class RegistrationFormPage {
             phoneForm = $("[class=EnterPhoneForm-container-xxkr8]");
 
 
+    @Step("Кликаем на форму регистрации")
     public RegistrationFormPage clickOnRegistrationButton() {
         registrationButtonInput.click();
 
         return this;
     }
 
+    @Step("Выбираем вид нового аккаунта")
     public RegistrationFormPage chooseAccountType() {
         personalAccountInput.click();
 
         return this;
     }
 
+    @Step("Нажимаем на кнопку 'Продолжить'")
     public RegistrationFormPage clickOnContinueButton() {
         continueButtonInput.click();
 
         return this;
     }
 
+    @Step("Проверяем появление ошибки")
     public RegistrationFormPage checkWarning (String value) {
         enterPhoneInput.shouldHave(text(value));
 
         return this;
     }
 
+    @Step("Проверяем отображение текста на странице регистрации")
     public RegistrationFormPage checkText (String value) {
         phoneForm.shouldHave(text(value));
 
         return this;
     }
 
+    @Step("Нажимаем на кнопку 'Войти'")
     public RegistrationFormPage clickEntryButton() {
         entryButtonInput.click();
 
         return this;
     }
 
+    @Step("Проверяем отображение формы регистрации")
     public RegistrationFormPage entryForm () {
         entryFormInput.shouldBe(visible);
 
@@ -63,6 +71,7 @@ public class RegistrationFormPage {
 
     }
 
+    @Step("Переходим на страницу с правилами")
     public RegistrationFormPage redirectToSection (String value) {
         bottomOfFormInput.$(byText(value)).click();
 
